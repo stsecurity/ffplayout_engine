@@ -328,7 +328,7 @@ def build_filtergraph(node, node_last, node_next):
     video_map = ['-map', '[vout1]']
     video_filter = [
         '-filter_complex',
-        f'[0:v]{video_filter};{logo_filter}{v_speed}{v_split}']
+        f"'[0:v]{video_filter};{logo_filter}{v_speed}{v_split}'"]
 
     a_speed = realtime_filter(out - seek, 'a')
     a_split = split_filter('a')
